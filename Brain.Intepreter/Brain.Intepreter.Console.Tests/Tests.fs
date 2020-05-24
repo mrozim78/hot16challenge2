@@ -7,9 +7,7 @@ open Microsoft.VisualStudio.TestTools.UnitTesting
 
 [<TestClass>]
 type TestClass () =
-
-   
-        
+          
     [<TestMethod>]
     member this.ShouldOutputZeroByte () =
         // assign
@@ -21,6 +19,7 @@ type TestClass () =
         let result = brain.Process(input)
         //assert        
         Assert.AreEqual(expected,result)
+        
     [<TestMethod>]
     member this.ShouldIncrementTheCellValue() =
         //assign
@@ -32,6 +31,7 @@ type TestClass () =
         let result = brain.Process(input)
         //assert
         Assert.AreEqual(expected,result)
+        
     [<TestMethod>]
     member this.ShouldDecrementCellValue() =
         //assign
@@ -43,6 +43,7 @@ type TestClass () =
         let result = brain.Process(input)
         //assert
         Assert.AreEqual(expected,result)
+        
     [<TestMethod>]
     member this.ShouldMoveDataPointerToTheRight() =
         //assign
@@ -54,6 +55,7 @@ type TestClass () =
         let result = brain.Process(input)
         //assert
         Assert.AreEqual(expected,result)
+        
     [<TestMethod>]
     member this.ShouldMoveDataPointerToTheLeft() =
         //assign
@@ -89,6 +91,7 @@ type TestClass () =
         let result = brain.Process(input)
         //assert
         Assert.AreEqual(expected,result)
+        
     [<TestMethod>]
     member this.ShouldAcceptThreeCharsAndIncrementEachByTwo() =
          //assign
@@ -112,6 +115,7 @@ type TestClass () =
         let result = brain.Process(input)
         //assert
         Assert.AreEqual(expected,result)
+        
     [<TestMethod>]
     member this.ShouldInterpretHelloWorldProgram() =
          //assign
@@ -123,6 +127,7 @@ type TestClass () =
         let result = brain.Process(input)
         //assert
         Assert.AreEqual(expected,result)
+        
       [<TestMethod>]
       member this.ShouldAcceptInputUntilCharTwoHundredTwentyFive() =
          //assign
@@ -134,6 +139,7 @@ type TestClass () =
         let result = brain.Process(input)
         //assert
         Assert.AreEqual(expected,result)
+        
       [<TestMethod>]
       member this.ShouldAcceptInputUntilCharZero() =
          //assign
@@ -145,6 +151,7 @@ type TestClass () =
         let result = brain.Process(input)
         //assert
         Assert.AreEqual(expected,result)
+        
       [<TestMethod>]
       member this.SshouldMultiplyTwoNumbers() =
          //assign
