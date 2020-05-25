@@ -1,6 +1,7 @@
 ﻿namespace Brain.Interpreter
 
 open Brain.Interpreter.Console
+open Brain.Interpreter.Console
 
 module Program =
 
@@ -13,11 +14,10 @@ let main argv =
         -1
     else   
         let program = argv.[0]
-        printf "Start interpreter BrainFuck"
-        printf "Program : \"%s\"" program
+        printf "\nProgram : '%s'" program
         let input = if argv.Length=2 then argv.[1] else ""
-        printf "Input : \"%s\"" input
+        printf "\nInput : '%s'" input
         let result = BrainFuck(program).Process(input)
-        printf "Result : \"%s\"" result
+        printf "\nResult : '%s'" result     
         0        
     

@@ -23,7 +23,7 @@ type TestClass () =
     [<TestMethod>]
     member this.ShouldIncrementTheCellValue() =
         //assign
-        let program = "++++"
+        let program = "++++."
         let input = ""
         let brain = BrainFuck(program)
         let expected = [|char 4|] |>  System.String 
@@ -145,7 +145,7 @@ type TestClass () =
          //assign
         let program = ",[.[-],]"
         let brain = BrainFuck(program)
-        let input = "F#\0 Rocks!"
+        let input = "F#\000 Rocks!"
         let expected ="F#"
         //action
         let result = brain.Process(input)
@@ -153,7 +153,7 @@ type TestClass () =
         Assert.AreEqual(expected,result)
         
       [<TestMethod>]
-      member this.SshouldMultiplyTwoNumbers() =
+      member this.ShouldMultiplyTwoNumbers() =
          //assign
         let program =  ",>,<[>[->+>+<<]>>[-<<+>>]<<<-]>>."
         let brain = BrainFuck(program)
